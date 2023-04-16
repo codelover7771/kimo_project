@@ -3,5 +3,54 @@
 @tailwind utilities;
 
 @layer components {
+    .button {
+        padding: 9px 24px 11px;
+        color: white;
+        width: 8rem;
+        height: 40px;
+        background: #008080;
+        border-radius: 8px;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .button:hover{
+        border: 1px solid #008080;
+        background: #fff;
+        font-size: 14px;
+        text-align: center;
+        color: #008080;
+      }
+      .menuItem{
+        font-family: IBM Plexo;
+        font-weight: 400;
+        font-size: 20px;
+        color: #001A1A;
+        line-height: 20px;       
+      }
+      .hero-text{
+        /* Welcome to Hawaii */
+left: 394px;
+top: 176px;
 
+font-family: 'IBM Plex Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 140px;
+line-height: 132px;
+/* or 94% */
+display: flex;
+align-items: center;
+text-align: center;
+
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 6.44%, #FFFFFF 95.08%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+
+      }
 }

@@ -1,23 +1,24 @@
 import { useState } from "react";
-import MobileNavbar from "./MobileNavbar";
+import MobileDrawer from "./MobileDrawer";
 import Hamburger from 'hamburger-react'
-//import Link from "next/link";
+import Link from "react-router-dom";
 
 const Navbar = () => {
-  const [menuState, setMenuState] = useState(false);
+  const [isOpen, setOpen] = useState(false);
+
   const logoSrc = "../assets/Aloha.png";
 
   const menuItems = ["Home", "Surfing", "Hula", "Vulcano"];
 
 
-  return (
-    <div className="w-full">
-      <nav className="lg:w-3/4 w-full h-[80px] flex border-2 border-rose-600 m-auto justify-between p-[24px] mt-[24px] lg:rounded-xl rounded-none items-center">
-        <div className="w-3/5 flex gap-[80px] items-center">
+  return ( 
+    <div className="w-full absolute z-20">
+      <nav className="lg:w-3/4 bg-white w-full h-[80px] flex border-2 m-auto justify-between p-[24px] lg:mt-[24px] lg:rounded-xl rounded-none items-center">
+        <div className="w-1/2 flex gap-[3rem] items-center">
           <div>
             <img src={logoSrc} alt="logo" />
           </div>
-          <div className="hidden lg:flex w-full justify-between font-IBM-Plexo  text-base">
+          <div className="hidden gap-[1rem] lg:flex w-full justify-between font-IBM-Plexo  text-base">
             {
                 menuItems.map((elem,index)=>
                     <div key={index}>{elem}</div>
@@ -27,13 +28,15 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:block">
-          <button className="w-[128px] text-align: center text-white bg-[#008080] p-2 rounded-md">Book a Trip</button>
+          <button className="button">
+            Book a Trip
+            </button>
         </div>
-        <div className="lg:hidden block">
-            <Hamburger/>
+        <div className="position-absolute lg:hidden block">
+            <Hamburger toggled={isOpen} toggle={setOpen}/>
         </div>
       </nav>
-
+       {isOpen && <MobileDrawer isOpen={isOpen} setOpen = {setOpen} menuItems={menuItems}/>}
     </div>
   );
 };
