@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 export default function HeroSection() {
   const HeroSrc = "../assets/heroImage.jpg";
   return (
