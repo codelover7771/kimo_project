@@ -12,11 +12,11 @@ const Navbar = () => {
 
 
   return ( 
-    <div className="w-full absolute z-20">
+    <div className="w-full lg:absolute z-20">
       <nav className="lg:w-3/4 bg-white w-full h-[80px] flex border-2 m-auto justify-between p-[24px] lg:mt-[24px] lg:rounded-xl rounded-none items-center">
         <div className="w-1/2 flex gap-[3rem] items-center">
           <div>
-            <img src={logoSrc} alt="logo" />
+            <img className="lg:origin-[-33%_-75%]" src={logoSrc} alt="logo" />
           </div>
           <div className="hidden gap-[1rem] lg:flex w-full justify-between font-IBM-Plexo  text-base">
             {
