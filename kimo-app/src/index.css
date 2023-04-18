@@ -16,6 +16,13 @@
     font-size: 14px;
     line-height: 20px;
   }
+  .category{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+  }
   .icon{
     width: 24px;
     height: 24px;

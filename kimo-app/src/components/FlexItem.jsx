@@ -5,7 +5,7 @@ import {AiOutlineArrowRight} from "react-icons/ai"
 export default function FlexItem({data}) {
 
   return (
-    <div className='flex flex-col max-w-[368px] min-w-[300px] h-[340px] rounded-[8px] bg-white shadow'>
+    <div className='flex flex-col max-w-[368px] min-w-[300px] h-[340px] rounded-[8px] shadow'>
         <div>
         <img src={data.image} alt='highlight-img' className='w-full h-[170px] rounded-t-[8px]'/>
         </div>

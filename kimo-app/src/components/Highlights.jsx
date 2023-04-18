@@ -15,12 +15,12 @@ export default function Highlights() {
     },[])
       console.log(data)  
   return (
-    <div className='w-full justify-center items-center'>
-        <div className='w-3/4 m-auto mt-[24px] md:w-9/10'>
-            <div className='mb-[24px]'>
-            <p className='heading'>Highlights</p>
+    <div className='w-full pb-12 justify-center items-center'>
+        <div className='w-5/6 m-auto mt-[24px] md:w-3[95%]'>
+            <div className='h-[80px] flex items-center'>
+                <p className='heading'>Highlights</p>
             </div>
-            <div className='w-full h-[340px] flex gap-2 overflow-auto scrollbar-hide md:px-0'>
+            <div className='w-full h-[340px] flex gap-3 overflow-auto scrollbar-hide md:px-0'>
                 {
                     data.map((elem,index)=>
                         <FlexItem key={index} data={elem}/>
