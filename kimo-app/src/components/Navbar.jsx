@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MobileDrawer from "./MobileDrawer";
 import Hamburger from 'hamburger-react'
-import Link from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -15,13 +15,13 @@ const Navbar = () => {
     <div className="w-full lg:absolute z-20">
       <nav className="lg:w-3/4 bg-white w-full h-[80px] flex border-2 m-auto justify-between p-[24px] lg:mt-[24px] lg:rounded-xl rounded-none items-center">
         <div className="w-1/2 flex gap-[3rem] items-center">
-          <div>
+          <Link to='/'>
             <img className="heroImage" src={logoSrc} alt="logo" />
-          </div>
+          </Link>
           <div className="hidden gap-[1rem] lg:flex w-full justify-between font-IBM-Plexo  text-base">
             {
                 menuItems.map((elem,index)=>
-                    <div key={index}>{elem}</div>
+                    <Link href="/${elem}" key={index}>{elem}</Link>
                 )
             }
           </div>
