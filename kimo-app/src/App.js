@@ -8,19 +8,26 @@ import HeroSection from './components/HeroSection';
 import Highlights from './components/Highlights';
 import CandD from './components/CandD';
 import Footer from './components/Footer';
+import Activity from './pages/Actiivity';
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
     <Navbar/>
     <HeroSection/>
-    <Highlights/>
-    <CandD/>
-    <Footer/>
-      {/* <SignUp />
-      <Login />
-      <Dashboard /> */}
-    </BrowserRouter>
+     <AllRoutes/>
+     <Footer/>
+    </>
+    // {/* <Navbar/>
+    // <HeroSection/>
+    // <Highlights/>
+    // <CandD/>
+    // <Footer/> */}
+    //   {/* <SignUp />
+    //   <Login />
+    //   <Dashboard /> 
+    //   {/* <Activity/> */}
+    
    
 
   );

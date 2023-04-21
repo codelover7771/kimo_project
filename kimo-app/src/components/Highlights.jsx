@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React, { useEffect} from 'react'
 import FlexItem from './FlexItem'
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchHighlights } from '../redux/action';
 
-export default function Highlights() {
-    const [data,setData] = useState([]) 
-    useEffect(() => {
-        axios
-        .get("https://web-dev.dev.kimo.ai/v1/highlights")
-        .then((result) => {
-          console.log(result.data);
-          setData(result.data);
-        })
-        .catch((error) => console.log(error));
-    },[])
-      console.log(data)  
+export default function Highlights (){
+  const dispatch = useDispatch();
+  const highlights = useSelector(state => state.highlights);
+
+  useEffect(() => {
+    dispatch(fetchHighlights());
+  }, [dispatch]);
+  
   return (
     <div className='w-full pb-12 justify-center items-center'>
         <div className='w-5/6 m-auto mt-[24px] md:w-3[95%]'>
@@ -22,7 +19,7 @@ export default function Highlights() {
             </div>
             <div className='w-full h-[340px] flex gap-3 overflow-auto scrollbar-hide md:px-0'>
                 {
-                    data.map((elem,index)=>
+                    highlights.map((elem,index)=>
                         <FlexItem key={index} data={elem}/>
                     )
                 }               

@@ -16,6 +16,20 @@
     font-size: 14px;
     line-height: 20px;
   }
+  .guide-button{
+    padding: 9px 24px 11px;
+    color: #008080;
+    width: 8rem;
+    height: 40px;
+    background: white;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    border: 1px solid #008080;
+  }
   .category{
     display: flex;
 flex-direction: column;
@@ -37,14 +51,19 @@ gap: 8px;
     .shadow{
       box-shadow: 0px 0px 16px rgba(0, 128, 128, 0.16);
     }
-  
-
   .button:hover {
     border: 1px solid #008080;
     background: #fff;
     font-size: 14px;
     text-align: center;
     color: #008080;
+  }
+  .guide-button:hover {
+    
+    background: #008080;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
   }
 
   .menuItem {

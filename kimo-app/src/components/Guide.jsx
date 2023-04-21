@@ -13,7 +13,7 @@ function Guide() {
                   <p className="heading p-1 font-normal">Guide Since 2012</p>
                 </div>
                 <div className="">
-                  <button className="button">Contact</button>
+                  <button className="guide-button">Contact</button>
                 </div>
             </div>
             <div>
