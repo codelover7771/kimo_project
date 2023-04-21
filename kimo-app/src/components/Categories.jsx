@@ -6,16 +6,20 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 function Categories() {
   const dispatch = useDispatch();
 
+  // Fetch categories on component mount
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
 
+  // Get categories and loading status from redux store
   const categories = useSelector((state) => state.categories);
   const loading = useSelector((state) => state.categories.loading);
 
+  // If categories are still loading, display loading message
   if (loading) {
     return <p>Loading...</p>;
   }
+
   return (
     <div className="w-full md:w-1/2 justify-between m-auto md:m-0">
       <div className="h-[80px] flex items-center">

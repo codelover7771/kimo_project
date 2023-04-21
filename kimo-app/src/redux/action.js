@@ -11,6 +11,7 @@ import {
   FETCH_ACTIVITY_FAILURE
 } from './actionTypes';
 
+// Fetch highlights data from the server
 export const fetchHighlights = () => {
   return (dispatch) => {
     dispatch(fetchHighlightsRequest());
@@ -25,12 +26,14 @@ export const fetchHighlights = () => {
   };
 };
 
+// Action creator for FETCH_HIGHLIGHTS_REQUEST
 export const fetchHighlightsRequest = () => {
   return {
     type: FETCH_HIGHLIGHTS_REQUEST
   };
 };
 
+// Action creator for FETCH_HIGHLIGHTS_SUCCESS
 export const fetchHighlightsSuccess = (highlights) => {
   return {
     type: FETCH_HIGHLIGHTS_SUCCESS,
@@ -38,6 +41,7 @@ export const fetchHighlightsSuccess = (highlights) => {
   };
 };
 
+// Action creator for FETCH_HIGHLIGHTS_FAILURE
 export const fetchHighlightsFailure = (error) => {
   return {
     type: FETCH_HIGHLIGHTS_FAILURE,
@@ -45,6 +49,7 @@ export const fetchHighlightsFailure = (error) => {
   };
 };
 
+// Fetch categories data from the server
 export const fetchCategories = () => {
   return (dispatch) => {
     dispatch(fetchCategoriesRequest());
@@ -59,12 +64,14 @@ export const fetchCategories = () => {
   };
 };
 
+// Action creator for FETCH_CATEGORIES_REQUEST
 export const fetchCategoriesRequest = () => {
   return {
     type: FETCH_CATEGORIES_REQUEST
   };
 };
 
+// Action creator for FETCH_CATEGORIES_SUCCESS
 export const fetchCategoriesSuccess = (categories) => {
   return {
     type: FETCH_CATEGORIES_SUCCESS,
@@ -72,6 +79,7 @@ export const fetchCategoriesSuccess = (categories) => {
   };
 };
 
+// Action creator for FETCH_CATEGORIES_FAILURE
 export const fetchCategoriesFailure = (error) => {
   return {
     type: FETCH_CATEGORIES_FAILURE,
@@ -79,6 +87,7 @@ export const fetchCategoriesFailure = (error) => {
   };
 };
 
+// Fetch activity data based on activityType from the server
 export const fetchActivity = (activityType) => {
   return (dispatch) => {
     dispatch(fetchActivityRequest());
@@ -94,12 +103,14 @@ export const fetchActivity = (activityType) => {
   };
 };
 
+// Action creator for FETCH_ACTIVITY_REQUEST
 export const fetchActivityRequest = () => {
   return {
     type: FETCH_ACTIVITY_REQUEST
   };
 };
 
+// Action creator for FETCH_ACTIVITY_SUCCESS
 export const fetchActivitySuccess = (activity) => {
   return {
     type: FETCH_ACTIVITY_SUCCESS,
@@ -107,6 +118,7 @@ export const fetchActivitySuccess = (activity) => {
   };
 };
 
+// Action creator for FETCH_ACTIVITY_FAILURE
 export const fetchActivityFailure = (error) => {
   return {
     type: FETCH_ACTIVITY_FAILURE,

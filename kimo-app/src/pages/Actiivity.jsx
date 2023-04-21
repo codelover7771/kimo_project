@@ -1,19 +1,26 @@
+//import necessary dependencies
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchActivity } from "../redux/action";
 import { useParams } from 'react-router-dom';
 
+//create a functional component for displaying activities
 export default function Activity() {
+  //initialize activity type by extracting from the URL
   const {activityType} = useParams()
+  
+  //initialize dispatch and state for loading and error
   const dispatch = useDispatch();
   const obj = useSelector((state) => state.activity);
   const loading = useSelector((state) => state.activity.loading);
   const error = useSelector((state) => state.activity.error);
 
+  //fetch activities from API on component mount and when activityType changes
   useEffect(() => {
     dispatch(fetchActivity(activityType));
   }, [dispatch, activityType]);
 
+  //render the activity section with appropriate information based on state
   return (
     <div className="bg-[#E6F2F2] min-h-screen flex flex-col justify-center items-center">
       <div className="w-full max-w-3xl px-4 py-8 bg-white rounded-lg shadow-md">
